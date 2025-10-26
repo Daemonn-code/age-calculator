@@ -29,7 +29,7 @@ if year < 0 or year > today.year:
     exit()
 
 # Enter birthmonth
-string_month = input(   "Enter your Birth Montth       : ").strip().capitalize()
+string_month = input(   "Enter your Birth Month       : ").strip().capitalize()
 month = datetime.strptime(string_month, "%B").month
 if month < 1 or month > 12 or (year == today.year and month > today.month):
     print("Invalid month.")
@@ -39,7 +39,7 @@ if month < 1 or month > 12 or (year == today.year and month > today.month):
 days_in_month = calendar.monthrange(year, month)[1]
 
 # Enter birthday
-day = int(input(     "Enter the day you were born : "))
+day = int(input(     "Enter the day you were born  : "))
 if day < 1 or day > days_in_month:
     print("Invalid number of days.")
     exit()
@@ -49,9 +49,9 @@ birthdate = date(year, month, day)
 # Displays birthdate
 print("               Your birthdate ")
 print("--------------------------------------------------")
-print("Year  : {birthdate.year} " \
-"    \nMonth : {birthdate.month} " \
-"    \nDay   : {birthdate.day}")
+print(f"Year  : {birthdate.year} " \
+f"    \nMonth : {birthdate.month} " \
+f"    \nDay   : {birthdate.day}")
 print("--------------------------------------------------")
 # Variables for the result
 yearResult = today.year - birthdate.year
@@ -61,9 +61,9 @@ dayResult = today.day - birthdate.day
 # Print the current date
 print("               Current Year")
 print("--------------------------------------------------")
-print("Year  : {birthdate.year} " \
-"    \nMonth : {birthdate.month} " \
-"    \nDay   : {birthdate.day}")
+print(f"Year  : {birthdate.year} " \
+f"    \nMonth : {birthdate.month} " \
+f"    \nDay   : {birthdate.day}")
 print("--------------------------------------------------")
 # Validates day
 if dayResult < 0:
@@ -82,8 +82,8 @@ if yearResult <= 0 and monthResult <= 0 and dayResult <= 0:
     exit()
 else:
     # Prints the final output
-    print("          You are currenly living with the age")
+    print("       You are currenly living with the age")
     print("--------------------------------------------------")
-    print("Year(s)  : {yearResult} "
-     "\nMonth(s) : {monthResult} "
-     "\nDay(s)   : {dayResult}")
+    print(f"Year(s)  : {yearResult} "
+     f"\nMonth(s) : {monthResult} "
+     f"\nDay(s)   : {dayResult}")
