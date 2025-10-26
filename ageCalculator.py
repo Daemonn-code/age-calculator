@@ -61,9 +61,9 @@ dayResult = today.day - birthdate.day
 # Print the current date
 print("               Current Year")
 print("--------------------------------------------------")
-print(f"Year  : {birthdate.year} " \
-f"    \nMonth : {birthdate.month} " \
-f"    \nDay   : {birthdate.day}")
+print(f"Year  : {today.year} " \
+f"    \nMonth : {today.month} " \
+f"    \nDay   : {today.day}")
 print("--------------------------------------------------")
 # Validates day
 if dayResult < 0:
